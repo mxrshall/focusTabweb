@@ -1,11 +1,9 @@
-import { useState } from 'react'
 import './App.css'
 import background from "./images/background.jpeg";
 import img1 from "./images/homepage.png";
 import img2 from "./images/details.png";
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
