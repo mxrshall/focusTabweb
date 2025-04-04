@@ -35,14 +35,16 @@ function App() {
           >
             Tracks time spent on websites.
           </motion.p>
-          <motion.button 
-            className='bg-white text-[#a5c6cb] px-5 py-1 rounded-lg'
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.8, duration: 0.5 }}
-          >
-            Download
-          </motion.button>
+          <a href={`${import.meta.env.BASE_URL}files/FocusTab.rar`} download>
+            <motion.button 
+              className='text-md bg-white text-[#a5c6cb] px-5 py-2 rounded-lg'
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.8, duration: 0.5 }}
+            >
+              Download
+            </motion.button>
+          </a>
         </div>
       </motion.div>
       <div className='w-full h-[40vh] flex justify-center items-center flex-col'>
@@ -72,7 +74,9 @@ function App() {
           transition={{ delay: 1.6, duration: 0.5 }}
         >
           <p>A Chrome browser extension for detailed tracking of time spent on individual tabs. Collected data can be displayed in clear cards or visualized through graphs. This extension helps users better analyze and organize their time spent browsing websites.</p>
-          <p className='text-[#a5c6cb] underline'>If you have any questions or feedback, feel free to email me.</p>
+          <a href="mailto:2821619@ucm.sk">
+            <p className='text-[#a5c6cb] underline'>If you have any questions or feedback, feel free to email me.</p>
+          </a>
         </motion.div>
       </div>
       <motion.div 
