@@ -51,12 +51,12 @@ function App() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
             >
-              Download
               <FaChrome 
                 size="18" 
                 color='#a5c6cb'
-                className='ml-1.5 mt-1.5'
+                className='mr-1.5 mt-1.5'
               />
+              Download
             </motion.button>
           </a>
         </div>
@@ -143,7 +143,7 @@ function App() {
       <div className='bg-cover bg-center' style={{ backgroundImage: `url(${background})` }}>
       <div className='w-full h-full bg-black bg-opacity-20 backdrop-blur-md shadow-lg flex justify-center items-center flex-col py-10'>
         <div className='flex justify-center items-center'>
-          <iframe style={{ border: 'none', backgroundColor: "white" }} src="https://cards.producthunt.com/cards/products/1052401" width="500" height="405" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+          <a href="https://www.producthunt.com/posts/focusiq?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-focusiq" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=949805&theme=neutral&t=1744842626967" alt="FocusIQ - Tab&#0032;Time&#0032;Tracking&#0032;Extension | Product Hunt" style={{ width: "300px", height: "75px" }} width="250" height="54" /></a>
         </div>
         <div className='flex flex-col justify-center items-center'>
           <p className='text-white text-2xl my-5 font-semibold'>If you have any questions or feedback, feel free to email me.</p>
