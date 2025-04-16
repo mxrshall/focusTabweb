@@ -46,12 +46,17 @@ function App() {
           </motion.p>
           <a href={`${import.meta.env.BASE_URL}files/FocusIQ.zip`} download>
             <motion.button 
-              className='text-md bg-white text-[#a5c6cb] px-5 py-2 rounded-lg'
+              className='text-lg bg-white text-[#a5c6cb] px-5 py-2 rounded-lg flex'
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.8, duration: 0.5 }}
             >
               Download
+              <FaChrome 
+                size="18" 
+                color='#a5c6cb'
+                className='ml-1.5 mt-1.5'
+              />
             </motion.button>
           </a>
         </div>
@@ -83,45 +88,12 @@ function App() {
           transition={{ delay: 1.6, duration: 0.5 }}
         >
           <p>A Chrome browser extension for detailed tracking of time spent on individual tabs. Collected data can be displayed in clear cards or visualized through graphs. This extension helps users better analyze and organize their time spent browsing websites.</p>
-          <br/>
-          <p className='mb-2 font-semibold'>If you have any questions or feedback, feel free to email me.</p>
-          <a href="mailto:2821619@ucm.sk">
-            <MdMail 
-              size="40" 
-              color="#a5c6cb" 
-              className="transition-transform duration-300 hover:scale-110 cursor-pointer" 
-            />
-          </a>
         </motion.div>
       </div>
-      <motion.div 
-        className="w-full flex justify-center items-center flex-col my-10"
-        initial={{ opacity: 0, y: 10 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.8, duration: 0.5 }}
-      >
-        <h1 className="text-xl font-bold mb-4">How to add an extension to Chrome</h1>
-        <p>1. Click on <span className="font-bold">Download</span> button</p>
-        <p>2. Unzip the file</p>
-        <p>
-          3. Go to{' '}
-          <a className="font-bold">
-            chrome://extensions/
-          </a>
-        </p>
-        <p>
-          4. Click on <span className="font-bold">"Load unpacked"</span> and select the <span className="font-bold">dist</span> folder
-        </p>
-        <img
-          src={chrome}
-          alt="chrome"
-          className="w-1/4 mt-5"
-        />
-      </motion.div>
       <Swiper
         className="w-full"
         modules={[Autoplay, Pagination, EffectFade]}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 2000 }}
         loop={true}
         slidesPerView={1}
         pagination={{ clickable: true }}
@@ -139,6 +111,57 @@ function App() {
         </SwiperSlide>
       ))}
       </Swiper>
+      <motion.div 
+        className="w-full flex justify-center items-center flex-col my-10"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.8, duration: 0.5 }}
+      >
+        <h1 className="text-2xl font-semibold mb-4">How to add an extension to Chrome</h1>
+        <div>
+          <p className='mb-1'>1. Click on <span className="font-semibold">Download</span> button</p>
+          <p className='mb-1'>2. Unzip the file</p>
+          <p className='mb-1'>
+            3. Go to{' '}
+            <a className="font-semibold">
+              chrome://extensions/
+            </a>
+          </p>
+          <p className='mb-1'>
+            4. Make sure <span className="font-semibold">Developer mode</span> is enabled (top right corner)
+          </p>
+          <p className='mb-1'>
+            5. Click on <span className="font-semibold">"Load unpacked"</span> and select the <span className="font-semibold">dist</span> folder
+          </p>
+        </div>
+        <img
+          src={chrome}
+          alt="chrome"
+          className="w-1/4 my-8"
+        />
+      </motion.div>
+      <div className='bg-cover bg-center' style={{ backgroundImage: `url(${background})` }}>
+      <div className='w-full h-full bg-black bg-opacity-20 backdrop-blur-md shadow-lg flex justify-center items-center flex-col py-10'>
+        <div className='flex justify-center items-center'>
+          <iframe style={{ border: 'none', backgroundColor: "white" }} src="https://cards.producthunt.com/cards/products/1052401" width="500" height="405" frameBorder="0" scrolling="no" allowFullScreen></iframe>
+        </div>
+        <div className='flex flex-col justify-center items-center'>
+          <p className='text-white text-2xl my-5 font-semibold'>If you have any questions or feedback, feel free to email me.</p>
+          <a href="mailto:2821619@ucm.sk">
+            <button 
+              className='text-lg bg-white text-[#a5c6cb] px-5 py-2 rounded-lg flex justify-center items-center'
+            >
+              Leave Feedback
+              <MdMail 
+                size="18" 
+                color="#a5c6cb"
+                className='ml-1.5 mt-0.5'
+              />
+            </button>
+          </a>
+        </div>
+      </div>
+      </div>
     </>
   )
 }
