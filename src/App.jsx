@@ -68,21 +68,21 @@ function App() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.5 }}
         >
-          <div className='flex justify-center items-center flex-col w-1/6'>
+          <div className='w-2/6 flex justify-center items-center flex-col md:w-1/6'>
             <FaDesktop size="50" color='#a5c6cb' />
             <p className='text-base mt-2'>Simple interface</p>
           </div>
-          <div className='flex justify-center items-center flex-col w-1/6'>
+          <div className='w-2/6 flex justify-center items-center flex-col md:w-1/6'>
             <MdTimer size="50" color='#a5c6cb' />
             <p className='text-base mt-2'>Time measurement</p>
           </div>
-          <div className='flex justify-center items-center flex-col w-1/6'>
+          <div className='w-2/6 flex justify-center items-center flex-col md:w-1/6'>
             <FaChrome size="50" color='#a5c6cb' />
             <p className='text-base mt-2'>Chrome extension</p>
           </div>
         </motion.div>
         <motion.div 
-          className='w-1/2 text-center pt-8 flex flex-col items-center'
+          className='w-full text-center pt-8 flex flex-col items-center md:w-1/2'
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.6, duration: 0.5 }}
@@ -105,7 +105,7 @@ function App() {
             <img
               src={item.image}
               alt={`slide-${item.id}`}
-              className="w-1/2 h-full"
+              className="w-full h-full md:w-1/2"
             />
           </div>
         </SwiperSlide>
@@ -137,7 +137,7 @@ function App() {
         <img
           src={chrome}
           alt="chrome"
-          className="w-1/4 my-8"
+          className="w-1/2 my-8 md:w-1/4"
         />
       </motion.div>
       <div className='bg-cover bg-center' style={{ backgroundImage: `url(${background})` }}>
@@ -146,7 +146,7 @@ function App() {
           <a href="https://www.producthunt.com/posts/focusiq?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-focusiq" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=949805&theme=neutral&t=1744842626967" alt="FocusIQ - Tab&#0032;Time&#0032;Tracking&#0032;Extension | Product Hunt" style={{ width: "300px", height: "75px" }} width="250" height="54" /></a>
         </div>
         <div className='flex flex-col justify-center items-center'>
-          <p className='text-white text-2xl my-5 font-semibold'>If you have any questions or feedback, feel free to email me.</p>
+          <p className='text-white text-2xl my-5 font-semibold text-center'>If you have any questions or feedback, feel free to email me.</p>
           <a href="mailto:2821619@ucm.sk">
             <button 
               className='text-lg bg-white text-[#a5c6cb] px-5 py-2 rounded-lg flex justify-center items-center'
